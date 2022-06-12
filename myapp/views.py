@@ -32,13 +32,13 @@ def about(request):
 
 
 def detail(request, top_no):
-    topic_detail = Topic.objects.filter(id=top_no).values()
-    if not topic_detail:
-        data = get_object_or_404(topic_detail)
+    topic = Topic.objects.filter(id=top_no).values()
+    if not topic:
+        data = get_object_or_404(topic)
     else:
         response = HttpResponse()
-        para = '<p>Detail for Topic <br>ID: ' + str(topic_detail[0].get('id')) + '<br> Name: <b>' + str(topic_detail[0].get('name')) + '</b><br>Category: <b>' + str(topic_detail[0].get('category')) +'</b></p>'
-        course_list = Course.objects.filter(topic=topic_detail[0].get('id'))
+        para = '<p>Detail for Topic <br>ID: ' + str(topic[0].get('id')) + '<br> Name: <b>' + str(topic[0].get('name')) + '</b><br>Category: <b>' + str(topic[0].get('category')) +'</b></p>'
+        course_list = Course.objects.filter(topic=topic[0].get('id'))
         print(course_list)
         heading = '<p>List of course for that topic are as below</p>'
         data = para + heading
