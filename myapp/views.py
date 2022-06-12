@@ -22,3 +22,8 @@ def index(request):
             course_para += '</span><br>'
             response.write(course_para)
     return response
+
+def about(request):
+    response = HttpResponse()
+    response.write("This is an E-learning Website! Search our Topics to find all available Courses.")
+    return response
