@@ -1,11 +1,16 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Topic, Course, Student, Order
-from django.shortcuts import  get_object_or_404
+from django.shortcuts import get_object_or_404
 
 
 # Create your views here.
 def index(request):
+    top_list = Topic.objects.all().order_by('id')[:10]
+    return render(request, 'myapp/index0.html', {'top_list': top_list})
+
+
+def index_old(request):
     top_list = Topic.objects.all().order_by('id')[:10]
     response = HttpResponse()
     heading1 = '<p>' + 'List of topics: ' + '</p>'
@@ -26,12 +31,22 @@ def index(request):
 
 
 def about(request):
+    return render(request, 'myapp/about0.html')
+
+
+def about_old(request):
     response = HttpResponse()
     response.write("This is an E-learning Website! Search our Topics to find all available Courses.")
     return response
 
 
 def detail(request, top_no):
+    response = HttpResponse()
+    topic = Topic.objects.filter(id=top_no).first()
+    return render(request, 'myapp/detail0.html', {'topic': topic})
+
+
+def detail_old(request, top_no):
     topic = Topic.objects.filter(id=top_no).values()
     if not topic:
         data = get_object_or_404(topic)
