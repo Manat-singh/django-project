@@ -7,7 +7,7 @@ from django.shortcuts import get_object_or_404
 # Create your views here.
 def index(request):
     top_list = Topic.objects.all().order_by('id')[:10]
-    return render(request, 'myapp/index0.html', {'top_list': top_list})
+    return render(request, 'myapp/index.html', {'top_list': top_list})
 
 
 def index_old(request):
@@ -31,7 +31,7 @@ def index_old(request):
 
 
 def about(request):
-    return render(request, 'myapp/about0.html')
+    return render(request, 'myapp/about.html')
 
 
 def about_old(request):
@@ -43,7 +43,7 @@ def about_old(request):
 def detail(request, top_no):
     response = HttpResponse()
     topic = Topic.objects.filter(id=top_no).first()
-    return render(request, 'myapp/detail0.html', {'topic': topic})
+    return render(request, 'myapp/detail.html', {'topic': topic})
 
 
 def detail_old(request, top_no):
