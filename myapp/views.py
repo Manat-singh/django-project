@@ -67,5 +67,6 @@ def courses(request):
     courlist = Course.objects.all().order_by('id')
     return render(request, 'myapp/courses.html', {'courlist': courlist})
 
+
 def place_order(request):
     return render(request, 'myapp/place_order.html')
