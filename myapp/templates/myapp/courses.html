@@ -1,0 +1,33 @@
+{% extends 'myapp/base.html' %}
+{% block body_block %}
+    <strong>This page displays the list of courses</strong>
+
+
+    {% if courlist %}
+
+
+        {% for co in courlist %}
+            <li>{{ co.name }}</li>
+        {% endfor %}
+        <p>
+
+        </p>
+        <li class="hbar1"><a href="/myapp/place_order">Place a new order</a></li>
+{#    <br>#}
+{#    <b>Categoty:</b> {{ topic.category }} <br/>#}
+{#    #}
+{#        <b>Related courses:</b> <br>#}
+{#        <ul>#}
+{#            {% for course in topic.courses.all %}#}
+{#                <li>{{ course.name }}</li>#}
+{#                <br>#}
+{#                {% empty %}#}
+{#                    No related courses#}
+{#            {% endfor %}#}
+{#        </ul>#}
+{#    {% else %}#}
+{#        No course found!!#}
+    {% endif %}
+
+
+{% endblock %}

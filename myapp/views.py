@@ -61,3 +61,8 @@ def detail_old(request, top_no):
             data += '<li>' + str(course) + '</li>'
     response.write(data)
     return response
+
+
+def courses(request):
+    courlist = Course.objects.all().order_by('id')
+    return render(request, 'myapp/courses.html', {'courlist': courlist})
