@@ -7,11 +7,12 @@
 
 
         {% for co in courlist %}
-            <li>{{ co.name }}</li>
+            <li>{{ co.name }} : {{ co.topic.name }}</li>
         {% endfor %}
         <p>
 
         </p>
+
         <li class="hbar1"><a href="/myapp/place_order">Place a new order</a></li>
 
     {% endif %}
