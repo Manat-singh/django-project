@@ -25,7 +25,7 @@ class Course(models.Model):
         return self.name
 
     def discount(self):
-        self.price = self.price * 0.9
+        self.price = int(self.price * 90 / 100)
         return self.price
 
 

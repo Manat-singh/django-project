@@ -78,6 +78,12 @@ def place_order(request):
             order = form.save(commit=False)
             if order.levels <= order.course.stages:
                 order.save()
+                cour_id = int(form['course'].value())
+                course = Course.objects.get(id=cour_id)
+                if course.price > 150:
+                    course.discount()
+                    course.save()
+
                 msg = 'Your course has been ordered successfully.'
             else:
                 msg = 'You exceeded the number of levels for this course.'
