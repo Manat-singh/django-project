@@ -13,18 +13,12 @@ class InterestForm(forms.Form):
 CHOICES = [(0, 'No'),
         (1, 'Yes')]
 
-# class OrderForm(forms.ModelForm):
-#     student = forms.ChoiceField(widget=forms.RadioSelect, queryset=Student.objects.all())
-#     course = forms.ChoiceField(widget=forms.RadioSelect, queryset=Course.objects.all())
-#     levels = forms.IntegerField(min_value=1, initial=1)
-#     order_date = forms.DateField(widget=forms.SelectDateWidget)
-
 
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
         fields = ('student', 'course', 'levels', 'order_date')
         widgets = {
-            'student': forms.RadioSelect(choices=CHOICES),
+            'student': forms.RadioSelect(),
             'order_date': forms.SelectDateWidget
         }

@@ -1,8 +1,9 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Topic, Course, Student, Order
 from django.shortcuts import get_object_or_404
-from myapp.forms import OrderForm
+from myapp.forms import OrderForm, InterestForm
+
 
 # Create your views here.
 def index(request):
@@ -84,3 +85,19 @@ def place_order(request):
     else:
         form = OrderForm()
     return render(request, 'myapp/placeorder.html', {'form':form, 'msg':msg, 'courlist':courlist})
+
+
+def coursedetail(request, cour_id):
+    course = Course.objects.get(id=cour_id)
+    if request.method == 'POST':
+        form = InterestForm(request.POST)
+        if form.is_valid():
+            interest = form.cleaned_data['interested']
+            print(interest)
+            if int(interest) == 1:
+                course.interested += 1
+                course.save()
+            return redirect('myapp:index')
+    else:
+        form = InterestForm()
+    return render(request, 'myapp/coursedetail.html', {'form':form, 'course': course})
