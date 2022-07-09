@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import Topic, Course, Student, Order
 from django.shortcuts import get_object_or_404
-
+from myapp.forms import OrderForm
 
 # Create your views here.
 def index(request):
@@ -69,4 +69,18 @@ def courses(request):
 
 
 def place_order(request):
-    return render(request, 'myapp/place_order.html')
+    msg = ''
+    courlist = Course.objects.all()
+    if request.method == 'POST':
+        form = OrderForm(request.POST)
+        if form.is_valid():
+            order = form.save(commit=False)
+            if order.levels <= order.course.stages:
+                order.save()
+                msg = 'Your course has been ordered successfully.'
+            else:
+                msg = 'You exceeded the number of levels for this course.'
+            return render(request, 'myapp/order_response.html', {'msg': msg})
+    else:
+        form = OrderForm()
+    return render(request, 'myapp/placeorder.html', {'form':form, 'msg':msg, 'courlist':courlist})

@@ -10,8 +10,21 @@ class InterestForm(forms.Form):
     comments = forms.CharField(label='Additional Comments', widget=forms.Textarea, required=False)
 
 
+CHOICES = [(0, 'No'),
+        (1, 'Yes')]
+
+# class OrderForm(forms.ModelForm):
+#     student = forms.ChoiceField(widget=forms.RadioSelect, queryset=Student.objects.all())
+#     course = forms.ChoiceField(widget=forms.RadioSelect, queryset=Course.objects.all())
+#     levels = forms.IntegerField(min_value=1, initial=1)
+#     order_date = forms.DateField(widget=forms.SelectDateWidget)
+
+
 class OrderForm(forms.ModelForm):
-    student = forms.ChoiceField(widget=forms.RadioSelect, queryset=Student.objects.all())
-    course = forms.ChoiceField(widget=forms.RadioSelect, queryset=Course.objects.all())
-    levels = forms.IntegerField(min_value=1, initial=1)
-    order_date = forms.DateField(widget=forms.SelectDateWidget)
+    class Meta:
+        model = Order
+        fields = ('student', 'course', 'levels', 'order_date')
+        widgets = {
+            'student': forms.RadioSelect(choices=CHOICES),
+            'order_date': forms.SelectDateWidget
+        }
