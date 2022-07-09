@@ -1,0 +1,32 @@
+{% extends 'myapp/base.html' %}
+{% block body_block %}
+    <strong>List of courses ------------------------ Price</strong>
+    <p>
+    **************************************************
+    </p>
+
+
+    {% if courlist %}
+
+
+        {% for co in courlist %}
+            <li>{{ co.name }} ------------------------------- {{ co.price }}</li>
+        {% endfor %}
+
+    {% endif %}
+    <p>
+    ************************************
+    </p>
+     <p>Place New Order</p>
+     <p>
+    ************************************
+    </p>
+
+    <form action="" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+    </form>
+
+
+{% endblock %}
