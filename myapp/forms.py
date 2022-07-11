@@ -10,10 +10,6 @@ class InterestForm(forms.Form):
     comments = forms.CharField(label='Additional Comments', widget=forms.Textarea, required=False)
 
 
-CHOICES = [(0, 'No'),
-        (1, 'Yes')]
-
-
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
