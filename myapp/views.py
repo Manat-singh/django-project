@@ -1,3 +1,4 @@
+from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
@@ -136,3 +137,21 @@ def user_login(request):
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect(reverse(('myapp:index')))
+
+@login_required()
+def myaccount(request):
+    if(request.user.is_authenticated):
+        user=request.user
+        try:
+            curr_student = Student.objects.get(id=user.id)
+            if(curr_student):
+                course_ordered = Order.objects.filter(student=curr_student)
+                topic_interested = curr_student.interested_in.all()
+                return render(request, 'myapp/myaccount.html', {'student':curr_student, 'orders':course_ordered, 'topics':topic_interested})
+            else:
+                return render(request, 'myapp/myaccount.html')
+        except ObjectDoesNotExist:
+            return render(request, 'myapp/myaccount.html')
+    else:
+        return HttpResponseRedirect(reverse(('myapp:login')))
+
