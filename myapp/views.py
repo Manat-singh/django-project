@@ -1,4 +1,7 @@
 from django.core.exceptions import ObjectDoesNotExist
+import datetime
+import json
+from django.utils import timezone
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
@@ -13,7 +16,12 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 def index(request):
     top_list = Topic.objects.all().order_by('id')[:10]
-    return render(request, 'myapp/index.html', {'top_list': top_list})
+    browserClose = request.session.get_expire_at_browser_close()
+    if 'last_login' in request.session:
+        last_login = request.session['last_login']
+    else:
+        last_login = 0
+    return render(request, 'myapp/index.html', {'top_list': top_list,'last_login':last_login,'browserCLose':browserClose})
 
 
 def index_old(request):
@@ -118,6 +126,13 @@ def user_login(request):
     if request.method == 'POST':
         username = request.POST['username']
         password = request.POST['password']
+        if request.session.test_cookie_worked():
+            request.session.delete_test_cookie()
+        request.session.set_test_cookie()
+        now = datetime.datetime.now()
+        json_str = json.dumps( now, default=str)
+        request.session['last_login'] = json_str
+        request.session.set_expiry(3600);
         user = authenticate(username=username, password=password)
         print(user)
         if user:
@@ -135,7 +150,8 @@ def user_login(request):
 
 @login_required
 def user_logout(request):
-    logout(request)
+    #logout(request)
+    del request.session['last_login']
     return HttpResponseRedirect(reverse(('myapp:index')))
 
 @login_required()
