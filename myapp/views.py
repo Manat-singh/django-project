@@ -45,7 +45,16 @@ def index_old(request):
 
 
 def about(request):
-    return render(request, 'myapp/about.html')
+    response = HttpResponse()
+    count = 1
+    if 'about_visits' in request.session:
+        count = request.session['about_visits']
+        request.session['about_visits'] = count + 1
+        request.session.set_expiry(300)
+    else:
+        request.session['about_visits'] = 1
+        request.session.set_expiry(300)
+    return render(request, 'myapp/about.html', {'count': count})
 
 
 def about_old(request):
