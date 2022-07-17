@@ -47,14 +47,16 @@ def index_old(request):
 def about(request):
     response = HttpResponse()
     count = 1
-    if 'about_visits' in request.session:
-        count = request.session['about_visits']
-        request.session['about_visits'] = count + 1
-        request.session.set_expiry(300)
+    about_visits = request.COOKIES.get('about_visits')
+    print(about_visits)
+    if about_visits:
+        count = int(about_visits) + 1
     else:
-        request.session['about_visits'] = 1
-        request.session.set_expiry(300)
-    return render(request, 'myapp/about.html', {'count': count})
+        count = 1
+
+    response = render(request, 'myapp/about.html', {'count': count})
+    response.set_cookie(key='about_visits', value=count, max_age=300)
+    return response
 
 
 def about_old(request):
