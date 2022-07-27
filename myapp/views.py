@@ -141,7 +141,7 @@ def user_login(request):
             request.session.delete_test_cookie()
         request.session.set_test_cookie()
         now = datetime.datetime.now()
-        json_str = json.dumps( now, default=str)
+        json_str = json.dumps(now, default=str)
         request.session['last_login'] = json_str
         request.session.set_expiry(3600);
         user = authenticate(username=username, password=password)
@@ -150,7 +150,7 @@ def user_login(request):
             if user.is_active:
                 login(request, user)
                 print('authenticated')
-                return HttpResponseRedirect(reverse('myapp:index'))
+                return HttpResponseRedirect(reverse('myapp:myaccount'))
             else:
                 return HttpResponse('Your account is disabled.')
         else:
@@ -161,9 +161,9 @@ def user_login(request):
 
 @login_required
 def user_logout(request):
-    #logout(request)
+    logout(request)
     del request.session['last_login']
-    return HttpResponseRedirect(reverse(('myapp:index')))
+    return HttpResponseRedirect(reverse(('myapp:login')))
 
 @login_required()
 def myaccount(request):
@@ -181,4 +181,22 @@ def myaccount(request):
             return render(request, 'myapp/myaccount.html')
     else:
         return HttpResponseRedirect(reverse(('myapp:login')))
+
+@login_required()
+def myorders(request):
+    if(request.user.is_authenticated):
+        user = request.user
+        try:
+            curr_student = Student.objects.get(id=user.id)
+            if (curr_student):
+                course_ordered = Order.objects.filter(student=curr_student)
+                return render(request, 'myapp/myorders.html', {'student': curr_student, 'orders': course_ordered})
+            else:
+                return render(request, 'myapp/myorders.html')
+
+        except ObjectDoesNotExist:
+            return render(request, 'myapp/myorders.html')
+    else:
+        return render('myapp:login')
+        #return HttpResponseRedirect(reverse(('myapp:login')))
 
