@@ -10,7 +10,6 @@
             {% if request.user %}
                 <h1>{% block myhdg %}Hello {{ request.user.first_name }} {% endblock %}</h1>
             {% endif %}
-
             {% block body_block %}*** {% endblock %}
         </div><hr />
         <div>

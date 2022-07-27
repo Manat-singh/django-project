@@ -162,7 +162,7 @@ def user_login(request):
 @login_required
 def user_logout(request):
     logout(request)
-    del request.session['last_login']
+    #del request.session['last_login']
     return HttpResponseRedirect(reverse(('myapp:login')))
 
 @login_required()
