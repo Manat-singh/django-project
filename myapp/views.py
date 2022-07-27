@@ -165,9 +165,10 @@ def user_logout(request):
     #del request.session['last_login']
     return HttpResponseRedirect(reverse(('myapp:login')))
 
-@login_required()
+
+# @login_required
 def myaccount(request):
-    if(request.user.is_authenticated):
+    if request.user.is_authenticated:
         user=request.user
         try:
             curr_student = Student.objects.get(id=user.id)
@@ -182,7 +183,7 @@ def myaccount(request):
     else:
         return HttpResponseRedirect(reverse(('myapp:login')))
 
-@login_required()
+
 def myorders(request):
     if(request.user.is_authenticated):
         user = request.user
@@ -197,6 +198,5 @@ def myorders(request):
         except ObjectDoesNotExist:
             return render(request, 'myapp/myorders.html')
     else:
-        return render('myapp:login')
-        #return HttpResponseRedirect(reverse(('myapp:login')))
+        return HttpResponseRedirect(reverse(('myapp:login')))
 
