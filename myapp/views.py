@@ -113,7 +113,10 @@ def place_order(request):
                 msg = 'You exceeded the number of levels for this course.'
             return render(request, 'myapp/order_response.html', {'msg': msg})
     else:
-        form = OrderForm()
+        if(request.user.is_authenticated):
+            form = OrderForm()
+        else:
+            form = None
     return render(request, 'myapp/placeorder.html', {'form':form, 'msg':msg, 'courlist':courlist})
 
 
@@ -159,7 +162,6 @@ def user_login(request):
         return render(request, 'myapp/login.html')
 
 
-@login_required
 def user_logout(request):
     logout(request)
     #del request.session['last_login']

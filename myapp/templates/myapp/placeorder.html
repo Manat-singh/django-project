@@ -17,16 +17,14 @@
     <p>
     ************************************
     </p>
-     <p>Place New Order</p>
-     <p>
-    ************************************
-    </p>
 
-    <form action="" method="post">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Submit">
-    </form>
-
+    {% if form %}
+        <p>Place New Order</p>
+        <form action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+        </form>
+    {% endif %}
 
 {% endblock %}

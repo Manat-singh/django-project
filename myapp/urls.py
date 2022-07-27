@@ -14,5 +14,6 @@ urlpatterns = [
     path(r'login', views.user_login, name='login'),
     path(r'logout', views.user_logout, name='logout'),
     path(r'myaccount', views.myaccount, name='myaccount'),
-    path(r'myorders', views.myorders, name='myorders')
+    path(r'myorders', views.myorders, name='myorders'),
+    path(r'register', views.user_login, name='register')
 ]

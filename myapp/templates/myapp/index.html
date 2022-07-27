@@ -1,17 +1,4 @@
 {% extends 'myapp/base.html' %}
-{% block myhdg %}
-    <h1>Hello Manat</h1>
-    {% if last_login %}
-    <p> Your Last Login: {{ last_login }}</p>
-    {% else %}
-    <p>Your Last Login was more than One Hour ago</p>
-    {% endif %}
-    {% if browserCLose %}
-    <p> Session Clear on Browser Close = True</p>
-    {% else %}
-    <p>Session Clear on Browser Close = False</p>
-    {% endif %}
-{% endblock %}
 {% block body_block %}
     {% if top_list %}
  <h2>List of Topics</h2>
