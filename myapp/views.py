@@ -5,10 +5,12 @@ from django.utils import timezone
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
+from django.core.mail import send_mail
+from django.conf import settings
 
 from .models import Topic, Course, Student, Order
 from django.shortcuts import get_object_or_404
-from myapp.forms import OrderForm, InterestForm
+from myapp.forms import OrderForm, InterestForm, ImageForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 
@@ -177,7 +179,17 @@ def myaccount(request):
             if(curr_student):
                 course_ordered = Order.objects.filter(student=curr_student)
                 topic_interested = curr_student.interested_in.all()
-                return render(request, 'myapp/myaccount.html', {'student':curr_student, 'orders':course_ordered, 'topics':topic_interested})
+                if request.method == 'POST':
+                    form = ImageForm(request.POST, request.FILES)
+                    if form.is_valid():
+                        form.save()
+                        img_obj = form.instance
+                        return render(request, 'myapp/myaccount.html',
+                                      {'student':curr_student, 'orders':course_ordered, 'topics':topic_interested,
+                                       'form': form, 'img_obj': img_obj})
+                else:
+                    form = ImageForm()
+                return render(request, 'myapp/myaccount.html', {'student':curr_student, 'orders':course_ordered, 'topics':topic_interested,'form': form})
             else:
                 return render(request, 'myapp/myaccount.html')
         except ObjectDoesNotExist:

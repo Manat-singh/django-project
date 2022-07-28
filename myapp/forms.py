@@ -1,6 +1,11 @@
 from django import forms
-from myapp.models import Order, Student, Course
+from myapp.models import Order, Student, Course, Image
 
+
+class ImageForm(forms.ModelForm):
+    class Meta:
+        model = Image
+        fields = ('image',)
 
 class InterestForm(forms.Form):
     CHOICES = [(0, 'No'),

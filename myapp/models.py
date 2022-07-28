@@ -66,3 +66,7 @@ class Order(models.Model):
 
     def __str__(self):
         return "order no:" + str(self.id) + " course: " + str(self.course.name) + " Student ID: " + str(self.student)
+
+
+class Image(models.Model):
+    image = models.ImageField(upload_to='images/')
