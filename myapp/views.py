@@ -10,9 +10,11 @@ from django.conf import settings
 
 from .models import Topic, Course, Student, Order
 from django.shortcuts import get_object_or_404
-from myapp.forms import OrderForm, InterestForm, ImageForm
+from myapp.forms import OrderForm, InterestForm, ImageForm, PasswordResetForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import hashers
+import random, string
 
 
 # Create your views here.
@@ -213,4 +215,26 @@ def myorders(request):
             return render(request, 'myapp/myorders.html')
     else:
         return HttpResponseRedirect(reverse(('myapp:login')))
+
+def password_reset(request):
+    if request.method == 'POST':
+        form = PasswordResetForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            curr_student = Student.objects.get(username=username)
+            email = curr_student.email
+            passwordString = ''.join(random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits) for _ in range(16))
+            passwordEncrypted = hashers.make_password(passwordString)
+            curr_student.password = passwordEncrypted;
+            curr_student.save();
+            message = "Your password has been changed successfully. Please find your new password: " + passwordString
+            send_mail('Password changed successfully',
+                      message,
+                      settings.EMAIL_HOST_USER,
+                      [email],
+                      fail_silently=False)
+            return render(request, 'myapp/password_reset.html', {'email': email})
+    else:
+        form = PasswordResetForm()
+    return render(request, 'myapp/password_reset.html')
 

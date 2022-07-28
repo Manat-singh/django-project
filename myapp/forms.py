@@ -1,11 +1,16 @@
 from django import forms
-from myapp.models import Order, Student, Course, Image
+from myapp.models import Order, Student, Course, Image, PasswordReset
 
 
 class ImageForm(forms.ModelForm):
     class Meta:
         model = Image
         fields = ('image',)
+
+class PasswordResetForm(forms.ModelForm):
+    class Meta:
+        model = PasswordReset
+        fields = ('username',)
 
 class InterestForm(forms.Form):
     CHOICES = [(0, 'No'),

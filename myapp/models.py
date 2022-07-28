@@ -70,3 +70,9 @@ class Order(models.Model):
 
 class Image(models.Model):
     image = models.ImageField(upload_to='images/')
+
+class PasswordReset(models.Model):
+    username = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.username
