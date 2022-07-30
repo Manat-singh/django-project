@@ -1,10 +1,10 @@
 {% extends 'myapp/base.html' %}
 {% block body_block %}
     {% if top_list %}
- <h2>List of Topics</h2>
+ <h2 class="m-3">List of Topics Available</h2>
  <ol>
  {% for top in top_list %}
- <li><a href="{% url "myapp:detail" top.id %}"> {{ top.name}} </a></li>
+ <li><a href="{% url "myapp:detail" top.id %}" class="link-primary"> {{ top.name}} </a></li>
  {% endfor %}
  </ol>
  {% else %}

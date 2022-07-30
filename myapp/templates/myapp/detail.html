@@ -1,22 +1,23 @@
 {% extends 'myapp/base.html' %}
 {% block body_block %}
-    <h1>Details</h1>
+    <h4 class="fw-bold m-3">Topic Details</h4>
 {% if topic %}
-<b>Name:</b> {{ topic.name }}
-<br>
-<b>Categoty:</b> {{ topic.category }} <br/>
+    <div class="mx-3"><b>Topic Name:</b> {{ topic.name }}
+    </div>
+    <div class="mx-3">
+        <b>Topic Category:</b> {{ topic.category }}
+    </div>
 
-    <b>Related courses:</b> <br>
-    <ul>
-        {% for course in topic.courses.all %}
-            <li>{{ course.name }}</li>
-            <br>
-            {% empty %}
-                No related courses
-        {% endfor %}
-    </ul>
-{% else %}
-    No course found!!
-{% endif %}
+        <b class="m-3">Related courses:</b> <br>
+        <ul>
+            {% for course in topic.courses.all %}
+                <li class="mx-2">{{ course.name }}</li>
+                {% empty %}
+                    No related courses
+            {% endfor %}
+        </ul>
+    {% else %}
+        No course found!!
+    {% endif %}
 
 {% endblock %}

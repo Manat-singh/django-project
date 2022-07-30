@@ -112,7 +112,7 @@ def place_order(request):
                     course.discount()
                     course.save()
 
-                msg = 'Your course has been ordered successfully.'
+                msg = 'Your order has been placed successfully.'
             else:
                 msg = 'You exceeded the number of levels for this course.'
             return render(request, 'myapp/order_response.html', {'msg': msg})

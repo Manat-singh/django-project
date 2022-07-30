@@ -1,22 +1,26 @@
 {% extends 'myapp/base.html' %}
 {% block body_block %}
     {% if course %}
-        <h2> Course Details: </h2>
-        <div>&nbsp; &nbsp;<span>Name - {{ course.name }} </span> </div>
-        <div>&nbsp; &nbsp;<span>Number of people interested - {{ course.interested }}</span> </div>
-        <div>&nbsp; &nbsp;<span>Price - {{ course.price }} </span> </div>
+        <h4 class="lead fw-bold m-3 mt-2"> Course Details: </h4>
+        <div class="mx-2">&nbsp; &nbsp;<span>Name - {{ course.name }} </span> </div>
+        <div class="mx-2">&nbsp; &nbsp;<span>Number of people interested - {{ course.interested }}</span> </div>
+        <div class="mx-2">&nbsp; &nbsp;<span>Price - {{ course.price }} </span> </div>
         {% if course.for_everyone %}
-            &nbsp; &nbsp;<strong>This course is for everyone</strong>
+            &nbsp; &nbsp;<strong class="mx-2">This course is for everyone</strong>
         {% else %}
-            &nbsp; &nbsp;<strong>This course is not for everyone</strong>
+            &nbsp; &nbsp;<strong class="mx-2">This course is not for everyone</strong>
         {% endif %}
         {% else %}
-        <strong> NO COURSE! </strong>
+        <strong class="mx-2"> NO COURSE! </strong>
     {%  endif %}
-    <br><br>
-    <form action="" method="post">
-    {% csrf_token %}
-    {{ form.as_table }}
-    <input type="submit" value="Submit">
-    </form>
+    <br>
+    <br>
+    <h3 class="lead fw-bold mx-3 mb-0">Interested?</h3>
+    <div class="form-signin w-100 mx-2">
+        <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_table }}
+        <input type="submit" value="Submit" class="btn btn-primary btn-block mb-4">
+        </form>
+    </div>
 {% endblock %}

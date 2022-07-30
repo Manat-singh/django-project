@@ -1,20 +1,33 @@
 {% extends 'myapp/base.html' %}
 {% block body_block %}
     {% if student %}
-        <div>&nbsp; &nbsp;<span>First Name - {{ student.first_name }} </span> </div>
-        <div>&nbsp; &nbsp;<span>Last Name - {{ student.last_name }} </span> </div>
+        <div class="mx-3 lead"><span>First Name - {{ student.first_name }} </span>
+            <span>,&nbsp; &nbsp;Last Name - {{ student.last_name }} </span>
+        </div>
         {% if orders %}
-            <h2> Your Orders</h2>
-            {% for order in orders %}
-                <div>&nbsp; &nbsp;<span>Name - {{ order.course.name }} </span> </div>
-                <div>&nbsp; &nbsp;<span>Price - {{ order.course.price }} </span> </div>
-                {% if order.order_status == 1 %}
-                    <div>&nbsp; &nbsp;<span>Status - Confirmed </span> </div>
-                {% else %}
-                    <div>&nbsp; &nbsp;<span>Status - Cancelled </span> </div>
-                {% endif %}
-                <br>
-            {% endfor %}
+            <h3 class="mx-3 mt-3 fw-bold"> Your Orders</h3>
+            <table class="mx-3 lead table">
+                <thead>
+                    <tr>
+                      <th scope="col">Course</th>
+                      <th scope="col">Price</th>
+                      <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for order in orders %}
+                    <tr>
+                    <td>{{ order.course.name }}</td>
+                    <td>Price: {{ order.course.price }}</td>
+                    {% if order.order_status == 1 %}
+                        &nbsp; &nbsp;<td>Confirmed </td>
+                    {% else %}
+                        &nbsp; &nbsp;<td>Cancelled </td>
+                    {% endif %}
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
         {% endif %}
     {% else %}
         <strong> You are not a registered student!!</strong>

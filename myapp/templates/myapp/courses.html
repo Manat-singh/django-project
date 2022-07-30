@@ -1,18 +1,18 @@
 {% extends 'myapp/base.html' %}
 {% block body_block %}
-    <strong>This page displays the list of courses</strong>
-
+    <h4 class="mx-3 fw-bold lead">Courses Available</h4>
 
     {% if courlist %}
-
-
+        <div class="mx-4 mt-2">
         {% for co in courlist %}
             <li> <a href="{% url "myapp:coursedetail" co.id %}">{{ co.name }} : {{ co.topic.name }} </a></li>
         {% endfor %}
-        <p>
-
-        </p>
-        <li class="hbar1"><a href="{% url 'myapp:place_order' %}">Place a new order</a></li>
+        </div>
+        <br>
+        <div class="mx-2">
+            <span class="mx-2 fw-bold">Want to place an order?</span>
+            <li class="hbar1"><a href="{% url 'myapp:place_order' %}">Place a new order</a></li>
+        </div>
     {% endif %}
 
 
