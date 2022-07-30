@@ -1,0 +1,1645 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2022-06-04T16:27:00.492Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Web Development , Development",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2022-06-04T16:27:09.243Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "Management , Business",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2022-06-04T16:27:18.862Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Economics , Finance & Accounting",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2022-06-04T16:27:29.606Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "IT Certification , IT & Software",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2022-06-04T16:27:37.811Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "5",
+    "object_repr": "Sports , Health & Fitness",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2022-06-04T16:37:46.485Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "John Smith",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2022-06-04T16:37:57.415Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": "John Smith",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2022-06-04T16:38:43.403Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": "Mary Jones",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2022-06-04T16:39:11.294Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": "Alan George",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2022-06-04T16:39:45.232Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Josh Jones",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2022-06-04T16:40:14.058Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "Chris Bill",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2022-06-04T16:47:58.541Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "CCNA",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2022-06-04T16:48:13.528Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "AWS",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2022-06-04T16:48:32.934Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "CompTIA Security",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2022-06-04T16:48:44.274Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Oracle SQL",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2022-06-04T16:48:57.450Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "5",
+    "object_repr": "Microeconomics",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2022-06-04T16:49:15.269Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "6",
+    "object_repr": "Introduction to Economics",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2022-06-04T16:49:26.144Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "7",
+    "object_repr": "Global Economics",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2022-06-04T16:49:43.319Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "8",
+    "object_repr": "Web Development Bootcamp",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2022-06-04T16:49:55.636Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "9",
+    "object_repr": "Web Design",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2022-06-04T16:50:12.322Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "10",
+    "object_repr": "Web Development Masterclass",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2022-06-04T16:50:21.769Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "11",
+    "object_repr": "Build Responsive Websites",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2022-06-04T16:50:42.138Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "12",
+    "object_repr": "Innovation for Business",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2022-06-04T16:50:54.976Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "13",
+    "object_repr": "Leadership Skills",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2022-06-04T16:51:03.730Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "14",
+    "object_repr": "Project Management",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2022-06-04T16:51:34.216Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "order no:1 course: Web Development Bootcamp Student ID: Mary Jones",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2022-06-04T16:51:41.604Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "order no:2 course: Project Management Student ID: Mary Jones",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2022-06-04T16:51:48.615Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "3",
+    "object_repr": "order no:3 course: CCNA Student ID: John Smith",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2022-06-04T16:51:54.843Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "4",
+    "object_repr": "order no:4 course: Microeconomics Student ID: Chris Bill",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2022-06-04T16:52:02.283Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "5",
+    "object_repr": "order no:5 course: Build Responsive Websites Student ID: Chris Bill",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2022-06-04T16:52:13.324Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "6",
+    "object_repr": "order no:6 course: Leadership Skills Student ID: Alan George",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2022-06-04T16:52:24.222Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "7",
+    "object_repr": "order no:7 course: Introduction to Economics Student ID: Josh Jones",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2022-06-10T15:56:29.824Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "14",
+    "object_repr": "Project Management",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"For everyone\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2022-07-09T21:28:57.949Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "9",
+    "object_repr": "order no:9 course: CCNA Student ID: Jones Mary",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2022-07-09T21:29:38.768Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "10",
+    "object_repr": "order no:10 course: CCNA Student ID: Jones Mary",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2022-07-09T21:36:04.602Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "1",
+    "object_repr": "CCNA",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2022-07-11T16:12:24.182Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "13",
+    "object_repr": "Leadership Skills",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Price\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2022-07-15T16:38:53.964Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "john",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 4,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 5,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 6,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add course",
+    "content_type": 7,
+    "codename": "add_course"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change course",
+    "content_type": 7,
+    "codename": "change_course"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete course",
+    "content_type": 7,
+    "codename": "delete_course"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view course",
+    "content_type": 7,
+    "codename": "view_course"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add topic",
+    "content_type": 8,
+    "codename": "add_topic"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change topic",
+    "content_type": 8,
+    "codename": "change_topic"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete topic",
+    "content_type": 8,
+    "codename": "delete_topic"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view topic",
+    "content_type": 8,
+    "codename": "view_topic"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 9,
+    "codename": "add_student"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 9,
+    "codename": "change_student"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 9,
+    "codename": "delete_student"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 9,
+    "codename": "view_student"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add order",
+    "content_type": 10,
+    "codename": "add_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change order",
+    "content_type": 10,
+    "codename": "change_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete order",
+    "content_type": 10,
+    "codename": "delete_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view order",
+    "content_type": 10,
+    "codename": "view_order"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add image",
+    "content_type": 11,
+    "codename": "add_image"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change image",
+    "content_type": 11,
+    "codename": "change_image"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete image",
+    "content_type": 11,
+    "codename": "delete_image"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view image",
+    "content_type": 11,
+    "codename": "view_image"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add password reset",
+    "content_type": 12,
+    "codename": "add_passwordreset"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change password reset",
+    "content_type": 12,
+    "codename": "change_passwordreset"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete password reset",
+    "content_type": 12,
+    "codename": "delete_passwordreset"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view password reset",
+    "content_type": 12,
+    "codename": "view_passwordreset"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$320000$1D9vvsmj2xNO1CIlDIgoCh$44aeWgIQ44uzS9WysjyNCeGjtxSkCbGzwM2hCWQnkic=",
+    "last_login": "2022-07-27T18:27:52.961Z",
+    "is_superuser": true,
+    "username": "manat",
+    "first_name": "",
+    "last_name": "",
+    "email": "cricketfreak24@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2022-06-04T16:25:50.772Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$320000$6Jy0QAeSbDbVUWT5ET2d46$CvbKGwZ5E0hrou1VF6hk8JqoJFhVxmOFjguXdzhutGo=",
+    "last_login": "2022-07-27T19:23:37.118Z",
+    "is_superuser": false,
+    "username": "john",
+    "first_name": "John",
+    "last_name": "Smith",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-06-04T16:35:17Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 3,
+  "fields": {
+    "password": "111",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "mary",
+    "first_name": "Mary",
+    "last_name": "Jones",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-06-04T16:38:01Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 4,
+  "fields": {
+    "password": "111",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "alan",
+    "first_name": "Alan",
+    "last_name": "George",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-06-04T16:38:43Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 5,
+  "fields": {
+    "password": "111",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "josh",
+    "first_name": "Josh",
+    "last_name": "Jones",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-06-04T16:39:11Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "111",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "chris",
+    "first_name": "Chris",
+    "last_name": "Bill",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2022-06-04T16:39:45Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "myapp",
+    "model": "course"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "myapp",
+    "model": "topic"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "myapp",
+    "model": "student"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "myapp",
+    "model": "order"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "myapp",
+    "model": "image"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "myapp",
+    "model": "passwordreset"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "aoiwczvdrb4ip3h6cy3t5nh0e38yo23o",
+  "fields": {
+    "session_data": ".eJxVjDsOgzAQBa8SuQ6WveAfZfrcIBJa20sgICxhRymi3D0g0dDOzHtfViiXkNI0EmvZJ60TRXZlM-bSzek5Lht9MBAAlTCVtBepW2haKbhRutHNg211h-8ydO9MazfGbQBn5jFMtOwivnB5Jh7SUtbR8z3hh838niLNt6M9HQyYh_0WY-3B1So6Y7Ww0rpgeidIR-iDBo0eAjpQvWy8I4MK0dTkhQeyUVn2-wN2M0r6:1oDXHm:cKCRBiOOJUFbQLwwc2VyX-ukgn8sGbAjj4HfrZgrfcI",
+    "expire_date": "2022-08-01T20:24:10.996Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "clfbg3c0x0woa0hu8e6uxb9ff7rh9fb5",
+  "fields": {
+    "session_data": ".eJxVjEtuwyAUAK9SsW4QPIefl933BpHQA55jagsqQ9REVe9eW8om25nR_LJOrcdal0xsZD91Wyixd7Zi636t11x2emEgAE7CnKR9k3oc9CjO3ElQ0l7YXvtGreVaPN2_8_ZgoxY7xFuf_a3R5nPaL8BeWMC4UDlE-sJyrTzW0rcc-JHwp238syZaP57ty2DGNh9bTEMAN6jkjNXCSuuimZwgnWCKGjQGiOhATfIcHBlUiGagIAKQTcqyv39YWFJt:1oDXTJ:tBsi1E7AWrNG_Jsp65C_zXdArTHqEZeJW0DE9sqti_I",
+    "expire_date": "2022-07-18T20:37:05.266Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "mik7fidl7478vi2lmtrco1v67lre8r88",
+  "fields": {
+    "session_data": ".eJxVjEtuwyAUAK9SsW4Qfpifl933BpHQA55jagsqQ9RWVe9eW8om25nR_LJOrcda10xsYl91XymxV7Zh636rt1wOemUgAC7CXAb7MugJxkkN3MjRaHVlR-0btZZr8fT9mfcfNkktxIHx3hd_b7T7nI4PsCcWMK5UTpE-sNwqj7X0PQd-JvxhG3-viba3R_s0WLAt5xaTDOCkSs5YLexgXTSzE6QTzFGDxgARHah5GIMjgwrRSAoiANmkLPv7B9RIUtU:1oDXIS:_ynfSEajZMAq5HWdu6ZF3_bySialNlNUZrMq9a-4J3Y",
+    "expire_date": "2022-07-18T21:24:52.080Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "mzv2cqaua95n5ymzlthdfdqubf1x5vqa",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGllx4vhDSZ8zWLteLw4gW4qTCnF3EikFtG9m3lsE2NYctpaWMJO4CiUuvxtCfKZyAHpAuVcZa1mXGeWhyJM2OVVKr9vp_h1kaHmvrfWITM4qNAydjypSsmPnU0TjAcCx8sAGd4WHXvPIg9eGyAHrfmDx-QIRMDkR:1o4XXR:zu-GROpKDQUh2Ffe3Kj67gwhnQGdszPxKHxPB5Hhnm4",
+    "expire_date": "2022-07-08T00:51:09.280Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "p714713rvcdfy15jyt6v69eofgtirbey",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGllx4vhDSZ8zWLteLw4gW4qTCnF3EikFtG9m3lsE2NYctpaWMJO4CiUuvxtCfKZyAHpAuVcZa1mXGeWhyJM2OVVKr9vp_h1kaHmvrfWITM4qNAydjypSsmPnU0TjAcCx8sAGd4WHXvPIg9eGyAHrfmDx-QIRMDkR:1nxWbG:Q82VzYvthM9Ln4wLY7gOofMrD-o9HL6rTDEbCjFpuc8",
+    "expire_date": "2022-06-18T16:26:06.978Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "qaq0zk3kpnfer6phwjaf9twvffc25084",
+  "fields": {
+    "session_data": ".eJxVjstuwyAURH-lYt0guISXl933DyKhC1zH1JapjKMmqvrvNVIW7Xbm6Mx8s4C3fQq3RlsomQ0M2OvfLGKaae1F_sD1Wnmq676VyDvCn23j7zXT8vZk_wkmbFPXYlYRvNLZW2eEk84nO3pBJsOYDBiMkNCDHuU5erKoEa2iKCKQy9od0p3anmqdCx2-r7rN1KcWbHtY6rWsR3phIABOwp6ke5FqkGYAxc_OaOMvrB9r1Fqpa6D7Z9kebFBGiJ9fsphS2A:1oDUM3:iLRqatX5ZZVIIZzRkAQD1bfrdJ3i-o0Sn3LN4lzOEkc",
+    "expire_date": "2022-07-18T18:16:23.793Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "v1yb9wz0bbd4b6759lygkbazl7wfuz19",
+  "fields": {
+    "session_data": ".eJxVjMtqwzAQAH-l7LkR8trWw8fe-wcBsZLWsWojFUuhLaX_XhtyyXVmmF9oXFsoZU0ME3yVfeUIr7BRbW4rt5QPegWUiBepL5156dSEw9RLoa2yarjCUbvKtaaSHX9_pv0Hpl5JeWC6t8XdK-8uxeOD8MQ8hZXzKeIH5VsRoeS2Jy_ORDxsFe8l8vb2aJ8GC9Xl3FLsPdp-jFYbJU1nbNCzlawizkGhIo-BLI5zN3jLmkYi3bOXHtnE0cDfP9j3Uts:1oDXI7:kLz7TDPfyQ_57mepL-s15hWc0-zM8Uul6_-kAGQYbqQ",
+    "expire_date": "2022-07-18T21:24:31.032Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "whk8kiv6tqub9fp97rm1vikdg4jbcuo9",
+  "fields": {
+    "session_data": ".eJxVzM1qxCAUhuFbKa47Yo7xL8vuewcDctSTiU3QEh3aUnrvTWA2s_3ej-eXbdi63-otFzaxKwMBcBHmMtiXQU8gp3Hkzgo1qitjr8w3ai3X4un7M-8_bJJaiGPGe1_8vdHuczocYE9bwLhSOUP6wHKrPNbS9xz4eeGP2vh7TbS9Pb5PwIJtOVlMMoCTKjljtbCDddHMTpBOMEcNGgNEdKDmYQyODCpEIymIAGSTsgfaqfVY65rp8L7qvlJif_8Gg1LV:1oDXHN:xV74cHCEsYIg94BzX1-lCcDYbLoqq0Hg89gbrgKgZyA",
+    "expire_date": "2022-07-18T21:23:45.219Z"
+  }
+},
+{
+  "model": "myapp.topic",
+  "pk": 1,
+  "fields": {
+    "name": "Web Development",
+    "category": "Development"
+  }
+},
+{
+  "model": "myapp.topic",
+  "pk": 2,
+  "fields": {
+    "name": "Management",
+    "category": "Business"
+  }
+},
+{
+  "model": "myapp.topic",
+  "pk": 3,
+  "fields": {
+    "name": "Economics",
+    "category": "Finance & Accounting"
+  }
+},
+{
+  "model": "myapp.topic",
+  "pk": 4,
+  "fields": {
+    "name": "IT Certification",
+    "category": "IT & Software"
+  }
+},
+{
+  "model": "myapp.topic",
+  "pk": 5,
+  "fields": {
+    "name": "Sports",
+    "category": "Health & Fitness"
+  }
+},
+{
+  "model": "myapp.course",
+  "pk": 1,
+  "fields": {
+    "topic": 4,
+    "name": "CCNA",
+    "price": "179.99",
+    "for_everyone": true,
+    "description": "",
+    "interested": 2,
+    "stages": 3
+  }
+},
+{
+  "model": "myapp.course",
+  "pk": 2,
+  "fields": {
+    "topic": 4,
+    "name": "AWS",
+    "price": "119.99",
+    "for_everyone": true,
+    "description": "",
+    "interested": 0,
+    "stages": 3
+  }
+},
+{
+  "model": "myapp.course",
+  "pk": 3,
+  "fields": {
+    "topic": 4,
+    "name": "CompTIA Security",
+    "price": "139.99",
+    "for_everyone": true,
+    "description": "",
+    "interested": 0,
+    "stages": 3
+  }
+},
+{
+  "model": "myapp.course",
+  "pk": 4,
+  "fields": {
+    "topic": 4,
+    "name": "Oracle SQL",
+    "price": "159.99",
+    "for_everyone": true,
+    "description": "",
+    "interested": 0,
+    "stages": 3
+  }
+},
+{
+  "model": "myapp.course",
+  "pk": 5,
+  "fields": {
+    "topic": 3,
+    "name": "Microeconomics",
+    "price": "199.99",
+    "for_everyone": true,
+    "description": "",
+    "interested": 0,
+    "stages": 3
+  }
+},
+{
+  "model": "myapp.course",
+  "pk": 6,
+  "fields": {
+    "topic": 3,
+    "name": "Introduction to Economics",
+    "price": "174.99",
+    "for_everyone": true,
+    "description": "",
+    "interested": 0,
+    "stages": 3
+  }
+},
+{
+  "model": "myapp.course",
+  "pk": 7,
+  "fields": {
+    "topic": 3,
+    "name": "Global Economics",
+    "price": "149.99",
+    "for_everyone": true,
+    "description": "",
+    "interested": 0,
+    "stages": 3
+  }
+},
+{
+  "model": "myapp.course",
+  "pk": 8,
+  "fields": {
+    "topic": 1,
+    "name": "Web Development Bootcamp",
+    "price": "199.99",
+    "for_everyone": true,
+    "description": "",
+    "interested": 0,
+    "stages": 3
+  }
+},
+{
+  "model": "myapp.course",
+  "pk": 9,
+  "fields": {
+    "topic": 1,
+    "name": "Web Design",
+    "price": "159.99",
+    "for_everyone": true,
+    "description": "",
+    "interested": 0,
+    "stages": 3
+  }
+},
+{
+  "model": "myapp.course",
+  "pk": 10,
+  "fields": {
+    "topic": 1,
+    "name": "Web Development Masterclass",
+    "price": "124.99",
+    "for_everyone": true,
+    "description": "",
+    "interested": 0,
+    "stages": 3
+  }
+},
+{
+  "model": "myapp.course",
+  "pk": 11,
+  "fields": {
+    "topic": 1,
+    "name": "Build Responsive Websites",
+    "price": "149.99",
+    "for_everyone": true,
+    "description": "",
+    "interested": 0,
+    "stages": 3
+  }
+},
+{
+  "model": "myapp.course",
+  "pk": 12,
+  "fields": {
+    "topic": 2,
+    "name": "Innovation for Business",
+    "price": "174.99",
+    "for_everyone": true,
+    "description": "",
+    "interested": 0,
+    "stages": 3
+  }
+},
+{
+  "model": "myapp.course",
+  "pk": 13,
+  "fields": {
+    "topic": 2,
+    "name": "Leadership Skills",
+    "price": "184.99",
+    "for_everyone": true,
+    "description": "",
+    "interested": 1,
+    "stages": 3
+  }
+},
+{
+  "model": "myapp.course",
+  "pk": 14,
+  "fields": {
+    "topic": 2,
+    "name": "Project Management",
+    "price": "149.99",
+    "for_everyone": false,
+    "description": "",
+    "interested": 0,
+    "stages": 3
+  }
+},
+{
+  "model": "myapp.student",
+  "pk": 2,
+  "fields": {
+    "school": "123 University Avenue",
+    "city": "WS",
+    "interested_in": [
+      1,
+      2,
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "myapp.student",
+  "pk": 3,
+  "fields": {
+    "school": "235 Sunset Avenue",
+    "city": "VC",
+    "interested_in": [
+      1,
+      3
+    ]
+  }
+},
+{
+  "model": "myapp.student",
+  "pk": 4,
+  "fields": {
+    "school": "306 Prince Street",
+    "city": "CG",
+    "interested_in": [
+      2,
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "myapp.student",
+  "pk": 5,
+  "fields": {
+    "school": "442 Sunset Avenue",
+    "city": "MR",
+    "interested_in": [
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "myapp.student",
+  "pk": 6,
+  "fields": {
+    "school": "987 King Street",
+    "city": "WS",
+    "interested_in": [
+      2
+    ]
+  }
+},
+{
+  "model": "myapp.order",
+  "pk": 1,
+  "fields": {
+    "course": 8,
+    "student": 3,
+    "levels": 1,
+    "order_status": 1,
+    "order_date": "2022-06-04"
+  }
+},
+{
+  "model": "myapp.order",
+  "pk": 2,
+  "fields": {
+    "course": 14,
+    "student": 3,
+    "levels": 1,
+    "order_status": 1,
+    "order_date": "2022-06-04"
+  }
+},
+{
+  "model": "myapp.order",
+  "pk": 3,
+  "fields": {
+    "course": 1,
+    "student": 2,
+    "levels": 1,
+    "order_status": 1,
+    "order_date": "2022-06-04"
+  }
+},
+{
+  "model": "myapp.order",
+  "pk": 4,
+  "fields": {
+    "course": 5,
+    "student": 6,
+    "levels": 1,
+    "order_status": 1,
+    "order_date": "2022-06-04"
+  }
+},
+{
+  "model": "myapp.order",
+  "pk": 5,
+  "fields": {
+    "course": 11,
+    "student": 6,
+    "levels": 1,
+    "order_status": 1,
+    "order_date": "2022-06-04"
+  }
+},
+{
+  "model": "myapp.order",
+  "pk": 6,
+  "fields": {
+    "course": 13,
+    "student": 4,
+    "levels": 1,
+    "order_status": 1,
+    "order_date": "2022-06-04"
+  }
+},
+{
+  "model": "myapp.order",
+  "pk": 7,
+  "fields": {
+    "course": 6,
+    "student": 5,
+    "levels": 1,
+    "order_status": 1,
+    "order_date": "2022-06-04"
+  }
+},
+{
+  "model": "myapp.order",
+  "pk": 8,
+  "fields": {
+    "course": 2,
+    "student": 2,
+    "levels": 1,
+    "order_status": 1,
+    "order_date": "2022-07-09"
+  }
+},
+{
+  "model": "myapp.order",
+  "pk": 11,
+  "fields": {
+    "course": 1,
+    "student": 3,
+    "levels": 1,
+    "order_status": 1,
+    "order_date": "2022-07-09"
+  }
+},
+{
+  "model": "myapp.order",
+  "pk": 12,
+  "fields": {
+    "course": 1,
+    "student": 4,
+    "levels": 1,
+    "order_status": 1,
+    "order_date": "2022-07-09"
+  }
+},
+{
+  "model": "myapp.order",
+  "pk": 13,
+  "fields": {
+    "course": 13,
+    "student": 2,
+    "levels": 1,
+    "order_status": 1,
+    "order_date": "2022-07-09"
+  }
+},
+{
+  "model": "myapp.order",
+  "pk": 14,
+  "fields": {
+    "course": 1,
+    "student": 6,
+    "levels": 1,
+    "order_status": 1,
+    "order_date": "2022-07-09"
+  }
+},
+{
+  "model": "myapp.order",
+  "pk": 15,
+  "fields": {
+    "course": 13,
+    "student": 6,
+    "levels": 1,
+    "order_status": 1,
+    "order_date": "2022-07-11"
+  }
+},
+{
+  "model": "myapp.order",
+  "pk": 16,
+  "fields": {
+    "course": 13,
+    "student": 5,
+    "levels": 1,
+    "order_status": 1,
+    "order_date": "2022-07-11"
+  }
+},
+{
+  "model": "myapp.order",
+  "pk": 17,
+  "fields": {
+    "course": 11,
+    "student": 3,
+    "levels": 1,
+    "order_status": 1,
+    "order_date": "2022-07-11"
+  }
+}
+]

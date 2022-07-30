@@ -1,34 +1,41 @@
 {% extends 'myapp/base.html' %}
 {% block body_block %}
     {% if student %}
-        <div>&nbsp; &nbsp;<span>First Name - {{ student.first_name }} </span> </div>
-        <div>&nbsp; &nbsp;<span>Last Name - {{ student.last_name }} </span> </div>
+        <div class="lead">&nbsp; &nbsp;<span>First Name - {{ student.first_name }} </span>
+            <span>, &nbsp; &nbsp;Last Name - {{ student.last_name }} </span>
+        </div>
         {% if orders %}
-            <h2> Courses Ordered</h2>
+            <br>
+            <h2 class="m-3">Courses Ordered</h2>
             {% for order in orders %}
-                <div>&nbsp; &nbsp;<span>Name - {{ order.course.name }} </span> </div>
-                <div>&nbsp; &nbsp;<span>Price - {{ order.course.price }} </span> </div>
+                <div class="lead">&nbsp; &nbsp;<span>Name - {{ order.course.name }} </span>
+                    <span>,&nbsp; &nbsp;Price - {{ order.course.price }} </span>
+                </div>
                 <br>
             {% endfor %}
         {% endif %}
 
         {% if topics %}
-            <h2> Interested Topics</h2>
+            <h2 class="m-3"> Interested Topics</h2>
             {% for topic in topics %}
-                <div>&nbsp; &nbsp;<span>Name - {{ topic.name }} </span> </div>
-                <div>&nbsp; &nbsp;<span>Category - {{ topic.category }} </span> </div>
+                <div class="lead">&nbsp; &nbsp;<span>Name - {{ topic.name }} </span>
+                    <span>,&nbsp; &nbsp;Category - {{ topic.category }} </span>
+                </div>
                 <br>
             {% endfor %}
         {% endif %}
-        <p><h1>Upload Image</h1></p>
-        <form method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-                {{ form.as_p }}
-            <button type="submit">Upload</button>
-        </form>
+        <br>
+        <h2 class="m-3">Upload Image</h2>
+        <div class="form-signin w-100">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                    {{ form.as_p }}
+                <button type="submit" class="btn btn-secondary btn-block mb-4">Upload</button>
+            </form>
+        </div>
         {% if img_obj %}
-            <h3>Succesfully uploaded : {{img_obj.title}}</h3>
-            <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:300px">
+            <h3 class="m-3">Succesfully uploaded : {{img_obj.title}}</h3>
+            <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:200px">
         {% endif %}
     {% else %}
         <strong> You are not a registered student!!</strong>
