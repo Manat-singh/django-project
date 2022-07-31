@@ -104,6 +104,7 @@ def place_order(request):
         form = OrderForm(request.POST)
         if form.is_valid():
             order = form.save(commit=False)
+            order.student_id = request.user.id
             if order.levels <= order.course.stages:
                 order.save()
                 cour_id = int(form['course'].value())

@@ -23,8 +23,7 @@ class InterestForm(forms.Form):
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
-        fields = ('student', 'course', 'levels', 'order_date')
+        fields = ( 'course', 'levels', 'order_date')
         widgets = {
-            'student': forms.RadioSelect(),
             'order_date': forms.SelectDateWidget
         }
