@@ -10,7 +10,7 @@ from django.conf import settings
 
 from .models import Topic, Course, Student, Order
 from django.shortcuts import get_object_or_404
-from myapp.forms import OrderForm, InterestForm, ImageForm, PasswordResetForm
+from myapp.forms import OrderForm, InterestForm, ImageForm, PasswordResetForm, StudentRegistrationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import hashers
@@ -25,7 +25,8 @@ def index(request):
         last_login = request.session['last_login']
     else:
         last_login = 0
-    return render(request, 'myapp/index.html', {'top_list': top_list,'last_login':last_login,'browserCLose':browserClose})
+    return render(request, 'myapp/index.html',
+                  {'top_list': top_list, 'last_login': last_login, 'browserCLose': browserClose})
 
 
 def index_old(request):
@@ -81,7 +82,8 @@ def detail_old(request, top_no):
         data = get_object_or_404(topic)
     else:
         response = HttpResponse()
-        para = '<p>Detail for Topic <br>ID: ' + str(topic[0].get('id')) + '<br> Name: <b>' + str(topic[0].get('name')) + '</b><br>Category: <b>' + str(topic[0].get('category')) +'</b></p>'
+        para = '<p>Detail for Topic <br>ID: ' + str(topic[0].get('id')) + '<br> Name: <b>' + str(
+            topic[0].get('name')) + '</b><br>Category: <b>' + str(topic[0].get('category')) + '</b></p>'
         course_list = Course.objects.filter(topic=topic[0].get('id'))
         print(course_list)
         heading = '<p>List of course for that topic are as below</p>'
@@ -118,11 +120,11 @@ def place_order(request):
                 msg = 'You exceeded the number of levels for this course.'
             return render(request, 'myapp/order_response.html', {'msg': msg})
     else:
-        if(request.user.is_authenticated):
+        if (request.user.is_authenticated):
             form = OrderForm()
         else:
             form = None
-    return render(request, 'myapp/placeorder.html', {'form':form, 'msg':msg, 'courlist':courlist})
+    return render(request, 'myapp/placeorder.html', {'form': form, 'msg': msg, 'courlist': courlist})
 
 
 def coursedetail(request, cour_id):
@@ -138,7 +140,7 @@ def coursedetail(request, cour_id):
             return redirect('myapp:index')
     else:
         form = InterestForm()
-    return render(request, 'myapp/coursedetail.html', {'form':form, 'course': course})
+    return render(request, 'myapp/coursedetail.html', {'form': form, 'course': course})
 
 
 def user_login(request):
@@ -169,17 +171,17 @@ def user_login(request):
 
 def user_logout(request):
     logout(request)
-    #del request.session['last_login']
+    # del request.session['last_login']
     return HttpResponseRedirect(reverse(('myapp:login')))
 
 
 # @login_required
 def myaccount(request):
     if request.user.is_authenticated:
-        user=request.user
+        user = request.user
         try:
             curr_student = Student.objects.get(id=user.id)
-            if(curr_student):
+            if (curr_student):
                 course_ordered = Order.objects.filter(student=curr_student)
                 topic_interested = curr_student.interested_in.all()
                 if request.method == 'POST':
@@ -188,11 +190,13 @@ def myaccount(request):
                         form.save()
                         img_obj = form.instance
                         return render(request, 'myapp/myaccount.html',
-                                      {'student':curr_student, 'orders':course_ordered, 'topics':topic_interested,
+                                      {'student': curr_student, 'orders': course_ordered, 'topics': topic_interested,
                                        'form': form, 'img_obj': img_obj})
                 else:
                     form = ImageForm()
-                return render(request, 'myapp/myaccount.html', {'student':curr_student, 'orders':course_ordered, 'topics':topic_interested,'form': form})
+                return render(request, 'myapp/myaccount.html',
+                              {'student': curr_student, 'orders': course_ordered, 'topics': topic_interested,
+                               'form': form})
             else:
                 return render(request, 'myapp/myaccount.html')
         except ObjectDoesNotExist:
@@ -202,7 +206,7 @@ def myaccount(request):
 
 
 def myorders(request):
-    if(request.user.is_authenticated):
+    if (request.user.is_authenticated):
         user = request.user
         try:
             curr_student = Student.objects.get(id=user.id)
@@ -217,6 +221,7 @@ def myorders(request):
     else:
         return HttpResponseRedirect(reverse(('myapp:login')))
 
+
 def password_reset(request):
     if request.method == 'POST':
         form = PasswordResetForm(request.POST)
@@ -224,7 +229,8 @@ def password_reset(request):
             username = form.cleaned_data['username']
             curr_student = Student.objects.get(username=username)
             email = curr_student.email
-            passwordString = ''.join(random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits) for _ in range(16))
+            passwordString = ''.join(
+                random.choice(string.ascii_uppercase + string.ascii_lowercase + string.digits) for _ in range(16))
             passwordEncrypted = hashers.make_password(passwordString)
             curr_student.password = passwordEncrypted;
             curr_student.save();
@@ -239,3 +245,36 @@ def password_reset(request):
         form = PasswordResetForm()
     return render(request, 'myapp/password_reset.html')
 
+
+def registers(request):
+    if request.user.is_authenticated:
+        user = request.user
+        msg = 'Registration Form'
+
+        try:
+            curr_student = Student.objects.get(id=user.id)
+
+            if curr_student:
+                msg = 'You are already registered as a student'
+
+        except ObjectDoesNotExist:
+            if request.method == 'POST':
+                form = StudentRegistrationForm(request.POST)
+                if form.is_valid():
+                    school = form.cleaned_data['school']
+                    city = form.cleaned_data['city']
+                    interested_in = form.cleaned_data['interested_in']
+                    new_student = Student.objects.create(first_name=user.first_name, last_name=user.last_name, school=school, city=city)
+                    for inter in interested_in:
+                        new_student.interested_in.add(inter)
+                    msg = 'user registered as student'
+                    return render(request, 'myapp/register.html', {'msg': msg})
+            else:
+                form = StudentRegistrationForm()
+
+            return render(request, 'myapp/register.html', {'form': form, 'msg': msg})
+
+    else:
+        msg = 'Login as a user first'
+
+    return render(request, 'myapp/register.html', {'msg': msg})

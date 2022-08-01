@@ -16,5 +16,7 @@ urlpatterns = [
     path(r'myaccount', views.myaccount, name='myaccount'),
     path(r'myorders', views.myorders, name='myorders'),
     path(r'register', views.user_login, name='register'),
-    path(r'password_reset', views.password_reset, name='password_reset')
+    path(r'password_reset', views.password_reset, name='password_reset'),
+    path(r'registers', views.registers, name='registers')
+
 ]

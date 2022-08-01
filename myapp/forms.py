@@ -1,5 +1,5 @@
 from django import forms
-from myapp.models import Order, Student, Course, Image, PasswordReset
+from myapp.models import Order, Student, Course, Image, PasswordReset,Topic
 
 
 class ImageForm(forms.ModelForm):
@@ -27,3 +27,17 @@ class OrderForm(forms.ModelForm):
         widgets = {
             'order_date': forms.SelectDateWidget
         }
+
+class StudentRegistrationForm(forms.ModelForm):
+    class Meta:
+        model = Student
+        fields = ('school', 'city', 'interested_in')
+    CITY_CHOICES = [('WS', 'Windsor'),
+                    ('CG', 'Calgary'),
+                    ('MR', 'Montreal'),
+                    ('VC', 'Vancouver')]
+    school = forms.CharField(label='School', widget=forms.Textarea, max_length=50, required=False)
+    city = forms.CharField(label='city', widget=forms.RadioSelect(choices=CITY_CHOICES), initial='WS')
+    interested_in = forms.ModelMultipleChoiceField(
+                    queryset=Topic.objects.all(),
+                    widget=forms.CheckboxSelectMultiple)
