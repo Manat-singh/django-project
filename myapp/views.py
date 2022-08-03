@@ -250,13 +250,10 @@ def registers(request):
     if request.user.is_authenticated:
         user = request.user
         msg = 'Registration Form'
-
         try:
             curr_student = Student.objects.get(id=user.id)
-
             if curr_student:
                 msg = 'You are already registered as a student'
-
         except ObjectDoesNotExist:
             if request.method == 'POST':
                 form = StudentRegistrationForm(request.POST)

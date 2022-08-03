@@ -16,14 +16,11 @@ class StudentAdmin(admin.ModelAdmin):
 
     def level(self, obj):
         levels = Order.objects.filter(student=obj)
-        count = 0;
+        count = 0
         levelList = ''
         for level in levels:
-
-            return level.levels;
-
-
-            levelList += str(level.levels);
+            return level.levels
+            levelList += str(level.levels)
             count += 1
             if (count < len(levels)):
                 levelList += ", "
@@ -32,7 +29,7 @@ class StudentAdmin(admin.ModelAdmin):
     def registered_courses(self, obj):
         courses = Order.objects.filter(student=obj)
         courseList = ""
-        count = 0;
+        count = 0
         for course in courses:
             courseList += course.course.name
             count +=1
@@ -68,6 +65,7 @@ def reduce_price(modeladmin, request, queryset):
 class CourseAdmin(admin.ModelAdmin):
 
     actions = [reduce_price]
+
 
 admin.site.register(Course, CourseAdmin)
 
