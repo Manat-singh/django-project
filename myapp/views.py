@@ -253,10 +253,11 @@ def register(request):
             username = form.cleaned_data['username']
             first_name = form.cleaned_data['first_name']
             last_name = form.cleaned_data['last_name']
+            email = form.cleaned_data['email']
             school = form.cleaned_data['school']
             city = form.cleaned_data['city']
             interested_in = form.cleaned_data['interested_in']
-            new_student = Student.objects.create(username=username, first_name=first_name, last_name=last_name, school=school,
+            new_student = Student.objects.create(username=username, first_name=first_name, last_name=last_name, email=email, school=school,
                                                  city=city)
             for inter in interested_in:
                 new_student.interested_in.add(inter)
