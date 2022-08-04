@@ -28,6 +28,7 @@ class OrderForm(forms.ModelForm):
             'order_date': forms.SelectDateWidget
         }
 
+
 class StudentRegistrationForm(forms.ModelForm):
     class Meta:
         model = Student
@@ -36,8 +37,9 @@ class StudentRegistrationForm(forms.ModelForm):
                     ('CG', 'Calgary'),
                     ('MR', 'Montreal'),
                     ('VC', 'Vancouver')]
-    school = forms.CharField(label='School', widget=forms.Textarea, max_length=50, required=False)
+    username = forms.CharField(label='username', max_length=100)
+    first_name = forms.CharField(label='first_name', max_length=100)
+    last_name = forms.CharField(label='last_name', max_length=100)
+    school = forms.CharField(label='School', max_length=50, required=False)
     city = forms.CharField(label='city', widget=forms.RadioSelect(choices=CITY_CHOICES), initial='WS')
-    interested_in = forms.ModelMultipleChoiceField(
-                    queryset=Topic.objects.all(),
-                    widget=forms.CheckboxSelectMultiple)
+    interested_in = forms.ModelMultipleChoiceField(queryset=Topic.objects.all(), widget=forms.CheckboxSelectMultiple)

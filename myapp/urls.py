@@ -15,8 +15,7 @@ urlpatterns = [
     path(r'logout', views.user_logout, name='logout'),
     path(r'myaccount', views.myaccount, name='myaccount'),
     path(r'myorders', views.myorders, name='myorders'),
-    path(r'register', views.user_login, name='register'),
-    path(r'password_reset', views.password_reset, name='password_reset'),
-    path(r'registers', views.registers, name='registers')
+    path(r'register', views.register, name='register'),
+    path(r'password_reset', views.password_reset, name='password_reset')
 
 ]

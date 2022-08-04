@@ -246,35 +246,23 @@ def password_reset(request):
     return render(request, 'myapp/password_reset.html')
 
 
-def registers(request):
-    if request.user.is_authenticated:
-        user = request.user
-        msg = 'Registration Form'
-
-        try:
-            curr_student = Student.objects.get(id=user.id)
-
-            if curr_student:
-                msg = 'You are already registered as a student'
-
-        except ObjectDoesNotExist:
-            if request.method == 'POST':
-                form = StudentRegistrationForm(request.POST)
-                if form.is_valid():
-                    school = form.cleaned_data['school']
-                    city = form.cleaned_data['city']
-                    interested_in = form.cleaned_data['interested_in']
-                    new_student = Student.objects.create(first_name=user.first_name, last_name=user.last_name, school=school, city=city)
-                    for inter in interested_in:
-                        new_student.interested_in.add(inter)
-                    msg = 'user registered as student'
-                    return render(request, 'myapp/register.html', {'msg': msg})
-            else:
-                form = StudentRegistrationForm()
-
-            return render(request, 'myapp/register.html', {'form': form, 'msg': msg})
-
+def register(request):
+    if request.method == 'POST':
+        form = StudentRegistrationForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            first_name = form.cleaned_data['first_name']
+            last_name = form.cleaned_data['last_name']
+            school = form.cleaned_data['school']
+            city = form.cleaned_data['city']
+            interested_in = form.cleaned_data['interested_in']
+            new_student = Student.objects.create(username=username, first_name=first_name, last_name=last_name, school=school,
+                                                 city=city)
+            for inter in interested_in:
+                new_student.interested_in.add(inter)
+            msg = 'user registered as student'
+            return render(request, 'myapp/register.html', {'msg': msg})
     else:
-        msg = 'Login as a user first'
+        form = StudentRegistrationForm()
 
-    return render(request, 'myapp/register.html', {'msg': msg})
+    return render(request, 'myapp/register.html', {'form': form})
