@@ -257,11 +257,15 @@ def register(request):
             school = form.cleaned_data['school']
             city = form.cleaned_data['city']
             interested_in = form.cleaned_data['interested_in']
+            unhashed_password = form.cleaned_data['password']
+            password = hashers.make_password(unhashed_password)
+            print(password)
             new_student = Student.objects.create(username=username, first_name=first_name, last_name=last_name, email=email, school=school,
-                                                 city=city)
+                                                 city=city, password=password)
             for inter in interested_in:
                 new_student.interested_in.add(inter)
-            msg = 'user registered as student'
+            msg = 'Congratulations, You are now registered as a student'
+            # return HttpResponseRedirect(reverse(('myapp:login')))
             return render(request, 'myapp/register.html', {'msg': msg})
     else:
         form = StudentRegistrationForm()

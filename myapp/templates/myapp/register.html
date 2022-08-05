@@ -10,16 +10,20 @@
 </head>
 
 <body>
-<p>Welcome, {{ msg }}</p>
+<div class=""> {{ msg }}</div>
 
-<body class="text-center mt-5">
-    <main class="form-signin w-100 m-auto">
-
-        <form action="" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Submit" class="btn btn-primary btn-block mb-4">
-        </form>
-    </main>
-</body>
+    <body class="text-center mt-5">
+        <main class="form-signin w-100 m-auto">
+            {% if form %}
+                <h3 class="p-2">Register as a student</h3>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="Submit" class="btn btn-primary btn-block mb-4" />
+                </form>
+            {% else %}
+                <a class="lead" href="{% url "myapp:login" %}"> Login</a>
+            {% endif %}
+        </main>
+    </body>
 </html>

@@ -37,10 +37,11 @@ class StudentRegistrationForm(forms.ModelForm):
                     ('CG', 'Calgary'),
                     ('MR', 'Montreal'),
                     ('VC', 'Vancouver')]
-    username = forms.CharField(label='username', max_length=100)
-    first_name = forms.CharField(label='first_name', max_length=100)
-    last_name = forms.CharField(label='last_name', max_length=100)
-    email = forms.CharField(label='email', max_length=100)
+    username = forms.CharField(label='Username', max_length=100)
+    password = forms.CharField(label='Password', widget=forms.PasswordInput())
+    first_name = forms.CharField(label='First Name', max_length=100)
+    last_name = forms.CharField(label='Last Name', max_length=100)
+    email = forms.CharField(label='Email', max_length=100)
     school = forms.CharField(label='School', max_length=50, required=False)
-    city = forms.CharField(label='city', widget=forms.RadioSelect(choices=CITY_CHOICES), initial='WS')
+    city = forms.CharField(label='City', widget=forms.RadioSelect(choices=CITY_CHOICES), initial='WS')
     interested_in = forms.ModelMultipleChoiceField(queryset=Topic.objects.all(), widget=forms.CheckboxSelectMultiple)
