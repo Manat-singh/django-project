@@ -47,7 +47,7 @@ class CourseInline(admin.TabularInline):
 
 @admin.register(Topic)
 class TopicAdmin(admin.ModelAdmin):
-    list_display = (('name', 'length'))
+    list_display = (('name', 'category'))
     inlines = [
         CourseInline
     ]
