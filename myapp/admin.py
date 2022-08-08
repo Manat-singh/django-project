@@ -19,7 +19,6 @@ class StudentAdmin(admin.ModelAdmin):
         count = 0
         levelList = ''
         for level in levels:
-            return level.levels
             levelList += str(level.levels)
             count += 1
             if (count < len(levels)):
