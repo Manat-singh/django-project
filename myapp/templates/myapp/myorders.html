@@ -5,29 +5,33 @@
             <span>,&nbsp; &nbsp;Last Name - {{ student.last_name }} </span>
         </div>
         {% if orders %}
-            <h3 class="mx-3 mt-3 fw-bold"> Your Orders</h3>
-            <table class="mx-3 lead table">
-                <thead>
-                    <tr>
-                      <th scope="col">Course</th>
-                      <th scope="col">Price</th>
-                      <th scope="col">Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                {% for order in orders %}
-                    <tr>
-                    <td>{{ order.course.name }}</td>
-                    <td>Price: {{ order.course.price }}</td>
-                    {% if order.order_status == 1 %}
-                        &nbsp; &nbsp;<td>Confirmed </td>
-                    {% else %}
-                        &nbsp; &nbsp;<td>Cancelled </td>
-                    {% endif %}
-                    </tr>
-                {% endfor %}
-                </tbody>
-            </table>
+            {% if orders|length > 0 %}
+                <h3 class="mx-3 mt-3 fw-bold"> Your Orders</h3>
+                <table class="mx-3 lead table">
+                    <thead>
+                        <tr>
+                          <th scope="col">Course</th>
+                          <th scope="col">Price</th>
+                          <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for order in orders %}
+                        <tr>
+                        <td>{{ order.course.name }}</td>
+                        <td>Price: {{ order.course.price }}</td>
+                        {% if order.order_status == 1 %}
+                            &nbsp; &nbsp;<td>Confirmed </td>
+                        {% else %}
+                            &nbsp; &nbsp;<td>Cancelled </td>
+                        {% endif %}
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                {% endif %}
+            {% else %}
+                <div class="mx-3 lead"><strong>No Order Placed</strong></div>
         {% endif %}
     {% else %}
         <strong> You are not a registered student!!</strong>
