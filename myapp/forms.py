@@ -23,10 +23,10 @@ class InterestForm(forms.Form):
 class OrderForm(forms.ModelForm):
     class Meta:
         model = Order
-        fields = ( 'course', 'levels', 'order_date')
-        widgets = {
-            'order_date': forms.SelectDateWidget
-        }
+        fields = ( 'course', 'levels')
+        # widgets = {
+        #     'order_date': forms.SelectDateWidget
+        # }
 
 
 class StudentRegistrationForm(forms.ModelForm):
